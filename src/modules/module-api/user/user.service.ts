@@ -85,7 +85,7 @@ export class UserService {
         });
 
         await axios.patch(
-          `http://localhost:8000/api/users/${user_id}/`,
+          `https://backend-django-webfoundpet.onrender.com/api/users/${user_id}/`,
           { avatar: uploadResult.public_id },
           { headers: { 'Content-Type': 'application/json' } },
         );

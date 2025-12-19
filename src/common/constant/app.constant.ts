@@ -27,7 +27,8 @@ class App_Constant {
   REFRESH_TOKEN_SECRET_EXPIRES_IN =
     process.env.REFRESH_TOKEN_SECRET_EXPIRES_IN || '30d';
 
-  URL_LOGIN_DJANGO = 'http://localhost:8000/api/users/';
+  URL_LOGIN_DJANGO =
+    'https://backend-django-webfoundpet.onrender.com/api/users/';
 }
 
 // export const ACCESS_TOKEN_SECRET = process.env.ACCESS_TOKEN_SECRET;
