@@ -22,7 +22,7 @@ async function bootstrap() {
 
   await app.listen(port, '0.0.0.0');
 
-  logger.log(`🚀 Server running on port ${port}`);
+  logger.log(`🚀 Server running on port http://localhost:${port}/api`);
 }
 
 bootstrap();
