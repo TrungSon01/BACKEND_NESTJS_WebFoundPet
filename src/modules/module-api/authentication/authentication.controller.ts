@@ -34,7 +34,7 @@ export class AuthenticationController {
   async googleAuthRedirect(@Request() req: any, @Res() res: Response) {
     const tokens = await this.authenticationService.googleLogin(req);
     return res.redirect(
-      `http://localhost:5173/login-success?accessToken=${tokens.accessToken}&refreshToken=${tokens.refreshToken}`,
+      `http://frontend-react-web-found-pet.vercel.app/login-success?accessToken=${tokens.accessToken}&refreshToken=${tokens.refreshToken}`,
     );
   }
 
@@ -49,7 +49,7 @@ export class AuthenticationController {
   async facebookAuthRedirect(@Request() req: any, @Res() res: Response) {
     const tokens = await this.authenticationService.facebookLogin(req);
     return res.redirect(
-      `http://localhost:5173/login-success?accessToken=${tokens.accessToken}&refreshToken=${tokens.refreshToken}`,
+      `http://frontend-react-web-found-pet.vercel.app/login-success?accessToken=${tokens.accessToken}&refreshToken=${tokens.refreshToken}`,
     );
   }
 
@@ -65,7 +65,7 @@ export class AuthenticationController {
     const { accessToken, refreshToken } =
       await this.authenticationService.githubLogin(req);
     return res.redirect(
-      `http://localhost:5173/login-success?accessToken=${accessToken}&refreshToken=${refreshToken}`,
+      `http://frontend-react-web-found-pet.vercel.app/login-success?accessToken=${accessToken}&refreshToken=${refreshToken}`,
     );
   }
   @Post('register')
